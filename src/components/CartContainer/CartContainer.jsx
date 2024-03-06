@@ -8,6 +8,8 @@ import { KeepBuying } from "../KeepBuying/KeepBuying"
 import { Title } from "../Title/Title"
 import { Button } from "react-bootstrap"
 
+import "./CartContainer.css"
+
 export const CartContainer = () => {
 
     const { cartList, emptyCart, totalPrice, deleteProduct } = useCartContext()
@@ -48,32 +50,34 @@ export const CartContainer = () => {
         })
     }
 
-    let title = "Productos agregados al carrito:"
+    let title = "PRODUCTOS AGREGADOS AL CARRITO"
     let text = "No hay productos agregados al carrito!"
 
     return (
 
-        <div className="contenedorCartContainer">           
-            
+        <div className="cart-container">
+
             {cartList.length != 0 ?
                 <>
-                    <Title title={title} />
-                    <div className="contenedorCartContainer">
+                    <div className="cart-title">
+                        <Title title={title} />
+                    </div>
+                    <div className="cart-cards-container">
                         {cartList.map(producto => (
                             <Cart key={producto.id} producto={producto} deleteProduct={deleteProduct} totalPrice={totalPrice} emptyCart={emptyCart} />))}
 
-                    </div> 
-                    <div>
-                        
-                        <Title title={`Precio total: ${totalPrice()}`}/>
+                    </div>
+                    <div className="cart-total-price">
+
+                        <Title title={`MONTO TOTAL: $${totalPrice()}`} />
 
                     </div>
 
-                    <div className="contenedorBoton">
+                    <div className="cart-button">
 
                         <KeepBuying />
 
-                        <Button onClick={emptyCart}>Vaciar carrito</Button>
+                        <Button style={{ background: 'rgb(133, 139, 252)' }} onClick={emptyCart}>Vaciar carrito</Button>
 
                     </div>
 
@@ -82,11 +86,11 @@ export const CartContainer = () => {
                 :
                 <div>
                     <Title text={text} />
-                    
+
                     <KeepBuying />
                 </div>
             }
-        
+
         </div>
 
     )

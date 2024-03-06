@@ -5,6 +5,8 @@ import { Loading } from "../Loading/Loading"
 import { doc, getDoc, getFirestore } from "firebase/firestore"
 import { Title } from "../Title/Title"
 
+import "./ItemDetailContainer.css"
+
 export const ItemDetailContainer = () => {
 
     const [product, setProduct] = useState({})
@@ -25,9 +27,9 @@ export const ItemDetailContainer = () => {
 
     return (
         
-        <div className="contenedorItemDetailContainer">
+        <div className="item-detail-container">
 
-            <Title title="Detalle de producto:"/>
+            <Title title="DETALLE DE PRODUCTO"/>
             {isLoading ?
                 <Loading />
                 :

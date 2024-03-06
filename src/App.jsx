@@ -5,8 +5,11 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { CartContextProvider } from './contexts/CartContext'
 import { CartContainer } from './components/CartContainer/CartContainer'
+import Footer from './components/Footer/Footer';
+
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
 
@@ -38,6 +41,8 @@ function App() {
             path='*'
             element={<Navigate to={'/'} />} />
         </Routes>
+
+        <Footer />
 
       </BrowserRouter>
 

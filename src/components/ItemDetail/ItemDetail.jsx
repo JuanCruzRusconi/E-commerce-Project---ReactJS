@@ -5,6 +5,7 @@ import { useCartContext } from "../../contexts/CartContext"
 import { KeepBuying } from "../KeepBuying/KeepBuying"
 import { Button, Card } from "react-bootstrap"
 
+import "./ItemDetail.css"
 
 export const ItemDetail = ({producto}) => {
 
@@ -22,15 +23,15 @@ export const ItemDetail = ({producto}) => {
     return (
 
         <>
-            <div className="contenedorItemDetail">
+            <div className="item-detail">
                 
                 <Card style={{ width: '22rem' }}>
-                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Img variant="top" src={producto.img} className="product-img" />
 
                     <Card.Body>
                         <Card.Title>{producto.nombre}</Card.Title>
                         <Card.Text>
-                            {producto.categoria} {producto.nombre} disponibles acutalmente en color {producto.color}.
+                            {producto.categoria} {producto.nombre} disponible acutalmente en color {producto.color}.
                         </Card.Text>
                         <Card.Title>${producto.precio}</Card.Title>
                         <Card.Text>Stock disponible: {producto.stock}</Card.Text>
@@ -45,10 +46,10 @@ export const ItemDetail = ({producto}) => {
                 <ItemCount onAdd={onAdd} />
                 :
                 <>
-                    <div className="contenedorBoton">
+                    <div className="button-container">
                         <KeepBuying />
                         <Link to={"/cart"}>
-                            <Button>Finalizar la compra</Button>
+                            <Button style={{ background: 'rgb(133, 139, 252)' }}>Finalizar la compra</Button>
                         </Link>
                     </div>
                 </>
@@ -58,7 +59,12 @@ export const ItemDetail = ({producto}) => {
     )
 }
 
+
+
 /*
+
+"holder.js/100px180"
+
  <div className="contenedorItem">
 
                 <div className="item">

@@ -2,15 +2,17 @@ import { memo } from "react"
 import { Button, Card } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
+import "./Item.css"
+
 const Item = memo ( ({producto}) => {
 
     return (
 
-        <div key={producto.id} className="contenedorItem">
+        <div key={producto.id} className="item">
 
             <Card style={{ width: '22rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-
+                <Card.Img variant="top" src={producto.img} className="product-img"/>
+            
                 <Card.Body>
 
                     <Card.Title>{producto.nombre}</Card.Title>
@@ -19,7 +21,7 @@ const Item = memo ( ({producto}) => {
                         bulk of the card's content.
                     </Card.Text>
                     <Link to={`/detail/${producto.id}`}>
-                        <Button variant="primary">Ver detalle de producto</Button>
+                        <Button style={{ background: 'rgb(133, 139, 252)' }} variant="primary">Ver detalle de producto</Button>
                     </Link>
 
                 </Card.Body>

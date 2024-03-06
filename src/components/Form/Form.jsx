@@ -1,6 +1,9 @@
 import { useState } from "react"
 import { Title } from "../Title/Title"
 
+import "./Form.css"
+import { Button } from "react-bootstrap"
+
 export function Form (){
 
   const [formData, setFormData] = useState({
@@ -20,19 +23,19 @@ export function Form (){
     })
   }
 
-  let title = "Formulario de contacto"
+  let title = "FORMULARIO DE CONTACTO"
   let text = "Rellene el formulario a continuación para que podeamos ponernos en contacto con usted."
 
   return (
 
-    <section className="contenedorForm">
+    <section className="form-container">
 
       <Title title={title} text={text} />
-      <form onSubmit={handleOnSubmit}>
-        <input type='text' name='name' placeholder='Ingrese su nombre' onChange={handleOnChange} value={formData.name} />
-        <input type='text' name='email' placeholder='Ingrese su ciudad' onChange={handleOnChange} value={formData.email} />
+      <form className="form" onSubmit={handleOnSubmit}>
+        <input className="input-form" type='text' name='name' placeholder='Ingrese su nombre' onChange={handleOnChange} value={formData.name} />
+        <input className="input-form" type='text' name='email' placeholder='Ingrese su ciudad' onChange={handleOnChange} value={formData.email} />
 
-        <button>Enviar</button>
+        <Button style={{ background: 'rgb(133, 139, 252)' }} variant="primary">Enviar</Button>
       </form>
 
     </section>

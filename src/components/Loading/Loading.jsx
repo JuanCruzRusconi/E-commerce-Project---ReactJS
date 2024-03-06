@@ -1,6 +1,8 @@
 import { useEffect } from "react"
 import { Title } from "../Title/Title"
 
+import "./Loading.css"
+
 export const Loading = () => {
 
     useEffect(() => {
@@ -11,8 +13,10 @@ export const Loading = () => {
     })
 
     return (
-
-        <Title title="Cargando..." />
+        
+        <div className="loading-container">
+            <Title title="CARGANDO..." />
+        </div>
         
     )
 }

@@ -1,10 +1,10 @@
-export const Title = ({ brand, title, text }) => {
+import "./Title.css"
+
+export const Title = ({ title, text }) => {
 
     return (
         
         <div>
-            
-            <h1 className="navBar">{brand}</h1>
 
             <h2 className="title">{title}</h2>
 

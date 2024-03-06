@@ -12,9 +12,9 @@ export const KeepBuying = () => {
         <Link to={"/"}>
 
             {cartList.length != 0 ?
-                <Button>Continuar comprando</Button>
+                <Button style={{ background: 'rgb(133, 139, 252)' }}>Continuar comprando</Button>
                 :
-                <Button>Visualizar productos</Button>
+                <Button style={{ background: 'rgb(133, 139, 252)' }}>Visualizar productos</Button>
             }
 
         </Link>

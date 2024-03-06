@@ -1,0 +1,75 @@
+.navBar-container{
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 3px 3px 5px 2px black;
+    list-style: none;
+    margin: 0px 0px 70px 0px;
+    padding: 0 50px 0 50px;
+    font-size: 0px 0px 0px 0px;
+    display: grid;
+    grid-template-columns: 1.75fr 2fr;
+    grid-template-rows: 50px;
+    gap: 0.3em;
+}
+  
+.brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.navBar {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    margin: -5px 0px 0px 0px;
+    transition: 0.3s;
+}
+
+.navBar-logo {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: -5px 0px 0px 0px;
+    transition: 0.3s;
+}
+
+.navBar-logo:hover {
+    color: rgb(133, 139, 252);
+    transform: scale(110%);
+    letter-spacing: 1.5px;
+    transition: 0.5s;
+}
+  
+.categories {
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 0px;
+    gap: 5rem;
+}
+  
+.navBar-categories {
+    color: rgb(240, 248, 255);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    margin: -5px 0px 0px 0px;
+    gap: 20px;
+}
+  
+.navBar:hover {
+    color: rgb(133, 139, 252);
+    transform: scale(110%);
+    letter-spacing: 1.5px;
+    transition: 0.5s;
+}

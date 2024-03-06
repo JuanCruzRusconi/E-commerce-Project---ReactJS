@@ -5,6 +5,8 @@ import { collection, getDocs, getFirestore, query, where } from "firebase/firest
 import ItemList from "../ItemList/ItemList"
 import { Loading } from "../Loading/Loading"
 
+import "./ItemListContainer.css"
+
 export const ItemListContainer = () => {
 
     const [products, setProducts] = useState([])
@@ -29,14 +31,15 @@ export const ItemListContainer = () => {
  
     return(
         
-        <section className="contenedorItemListContainer">
-
-            <Title title="Estos son los productos en stock:" /> 
+        <section className="item-list-container">
             
             {loading ?
                 <Loading />
                 :
-                <ItemList productos={products} />
+                <>
+                    <Title title="PRODUCTOS EN STOCK" />
+                    <ItemList productos={products} />
+                </>
             }    
             
         </section>
