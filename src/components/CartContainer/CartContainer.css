@@ -1,7 +1,7 @@
 .cart-container {
     background-color: rgba(0, 0, 0, 0.3);
     height: auto;
-    min-height: 750px;
+    min-height: 720px;
     margin: 70px 40px 0px 40px;
     padding: 0px 0px 50px 0px;
     display: flex;

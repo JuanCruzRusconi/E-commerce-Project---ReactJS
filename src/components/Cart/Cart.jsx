@@ -17,7 +17,7 @@ export const Cart = ( {producto, deleteProduct} ) => {
                         <Card.Title>{producto.nombre}</Card.Title>
                         <Card.Title>${producto.precio}</Card.Title>
                         <Card.Title>Cantidad: {producto.cantidad}</Card.Title>
-                        <Button style={{ background: 'rgb(133, 139, 252)' }} onClick={() => deleteProduct(producto.id)}>Eliminar del carrito</Button>
+                        <Button style={{ background: 'rgb(254, 96, 96)' }} onClick={() => deleteProduct(producto.id)}>Eliminar del carrito</Button>
 
                     </Card.Body>
                 </Card>
