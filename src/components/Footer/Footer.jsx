@@ -17,7 +17,9 @@ const Footer = () => {
                     <p className="copyright-text">© Copyright 2024.  JCR.</p>
                 </div>
                 <div className="copyright-contact">
-                    <p className="copyright-text">Contact</p>
+                    <NavLink to={"/form"}>
+                        <p className="copyright-text">Contact.</p>
+                    </NavLink>
                 </div>
             </div>
         </div>
