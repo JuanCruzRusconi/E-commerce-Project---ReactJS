@@ -84,8 +84,8 @@ export const CartContainer = () => {
                     <CartForm generateOrder={generateOrder} handleOnChange={handleOnChange} dataForm={dataForm} />
                 </>
                 :
-                <div>
-                    <Title text={text} />
+                <div className="empty-cart-container">
+                    <Title title={title} text={text} />
 
                     <KeepBuying />
                 </div>

@@ -31,6 +31,7 @@ export function Form (){
     <section className="form-container">
 
       <Title title={title} text={text} />
+      
       <form className="form" onSubmit={handleOnSubmit}>
         <input className="input-form" type='text' name='name' placeholder='Ingrese su nombre' onChange={handleOnChange} value={formData.name} />
         <input className="input-form" type='text' name='email' placeholder='Ingrese su email' onChange={handleOnChange} value={formData.email} />
